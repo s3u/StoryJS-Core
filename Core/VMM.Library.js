@@ -66,6 +66,12 @@ if(typeof VMM != 'undefined') {
 		
 	};
 	
+	VMM.onSlideChange = function(the_handler) {
+		if( typeof( jQuery ) != 'undefined' ){
+			jQuery(window).bind("CHANGE_SLIDE", the_handler);
+		}
+	}
+
 	VMM.bindEvent = function(element, the_handler, the_event_type, event_data) {
 		var e;
 		var _event_type = "click";

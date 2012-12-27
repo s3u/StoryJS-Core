@@ -700,6 +700,10 @@ if(typeof VMM != 'undefined' && typeof VMM.Slider == 'undefined') {
 			
 			preloadSlides();
 			VMM.fireEvent($slider, "MESSAGE", "TEST");
+
+            if (typeof( jQuery ) != 'undefined' ){
+                jQuery(window).trigger("CHANGE_SLIDE", n);
+            }
 		}
 
 		function backToCurrentSlide() {
